@@ -16,6 +16,6 @@ public class Verify implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
-        return pdfText.contains("Tarifas de cuentas de Depósitos");
+        return pdfText.contains("Tarifas de cuentas de Dep\u00f3sitos");
     }
 }
