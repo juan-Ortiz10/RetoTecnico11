@@ -1,0 +1,31 @@
+group = 'co.com.choucair.pdfverify'
+version = '1.0'
+description = 'Automatización Verificar PDFs Bancolombia'
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+repositories {
+    mavenCentral()
+}
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:1.9.9")
+    }
+}
+dependencies {
+    testImplementation 'net.serenity-bdd:serenity-core:3.2.5'
+    testImplementation 'net.serenity-bdd:serenity-junit:3.2.5'
+    testImplementation ('junit:junit:4.13.2')
+    testImplementation ('org.assertj:assertj-core:3.22.0')
+    testImplementation ('org.slf4j:slf4j-simple:1.7.36')
+    implementation 'net.serenity-bdd:serenity-core:3.2.5'
+    implementation 'net.serenity-bdd:serenity-junit:3.2.5'
+    implementation 'net.serenity-bdd:serenity-cucumber:3.2.5'
+    implementation 'net.serenity-bdd:serenity-screenplay:3.2.5'
+    implementation 'net.serenity-bdd:serenity-screenplay-webdriver:3.2.5'
+    implementation 'com.itextpdf:itextpdf:5.5.13.1'
+}
+gradle.startParameter.continueOnFailure = true
